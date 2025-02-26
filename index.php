@@ -10,7 +10,7 @@ $action = $_GET["action"] ?? "accueil";
 
 switch($action){
     case "accueil":
-        require_once "";
+        require_once "View/v_accueil.php";
         break;
     case "seConnecter": 
         break;
