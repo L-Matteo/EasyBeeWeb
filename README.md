@@ -21,11 +21,9 @@ Cette application est destinée :
 
 ## 📋Prérequis
 - PHP (8.2 minimum)
-- Symfony (version 6.3 ou supérieure recommandée)  
 - IDE compatible (VS Code, PHPStorm, etc.)
 - Serveur web (WAMP, XAMPP, etc)
 - MySQL ou un autre serveur de base de données relationnelle
-- Composer (pour gérer les dépendances PHP).
 
 
 ## 🚀Installation  
