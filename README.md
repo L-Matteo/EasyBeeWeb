@@ -32,19 +32,9 @@ Cette application est destinée :
  2. Importez le fichier *data.sql* pour y ajouter les données de test (formations, utilisateurs, etc.).  
 #### Application :  
  1. Clonez ou téléchargez ce dépôt.
- 2. Assurez-vous que Composer est installé, puis exécutez :
-      ```bash
-      composer install
- 3. Modifiez le fichier .env pour y renseigner vos identifiants de base de données :
-     ```bash
-     DATABASE_URL="mysql://utilisateur:motdepasse@127.0.0.1:3306/nom_de_la_base"
-     
-#### Lancement :
- 1. Démarrez le serveur Symfony
-     ```bash
-     symfony server:start
-     
- 2. Accédez à l'application : ouvrez votre navigateur et rendez-vous sur http://localhost:8000.
+
+#### Lancement :  
+ 1. Accédez à l'application : ouvrez votre navigateur et rendez-vous sur http://localhost.
 
 ## 📝 Notes supplémentaires : 
 Pour vous connecter, utilisez les identifiants présents dans les données de test.
