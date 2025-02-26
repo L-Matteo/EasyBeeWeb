@@ -13,6 +13,7 @@ switch($action){
         require_once "View/v_accueil.php";
         break;
     case "seConnecter": 
+        require_once "View/v_seConnecter.php";
         break;
 }
 
