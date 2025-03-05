@@ -12,9 +12,14 @@ switch($action){
     case "accueil":
         require_once "View/v_accueil.php";
         break;
-    case "seConnecter": 
-        require_once "View/v_seConnecter.php";
+    case "signIn": 
+        require_once "View/v_signIn.php";
+        break;
+    case "createAccount":
+        require_once "View/v_createAccount.php";
         break;
 }
+
+require_once "View/v_footer.php";
 
 ?>

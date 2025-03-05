@@ -1,0 +1,83 @@
+#navAccueil {
+    background-color: #303030;
+    width: 100%;
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstA {
+    margin-left: 15rem;
+}
+
+.a {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #F9E79F;
+    text-decoration: none;
+    margin-left: 3rem;
+}
+
+.a:hover {
+    border-bottom: 0.4rem solid #F9E79F;
+}
+
+.btnConnexion {
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #F0B27A;
+    margin-left: 30rem
+}
+
+.btnConnexion:hover {
+    transform: scale(1.05);
+}
+
+#formConnexion {
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+#formConnexion label {
+    margin-left: 27rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#formConnexion input {
+    border-radius: 0.3rem;
+}
+
+#formConnexion input[type="text"],
+#formConnexion input[type="password"] {
+    border: 0.14rem solid #303030;
+    width: 40%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 27rem;
+    background-color: #f8f9f9;
+}
+
+#formConnexion a {
+    margin-left: 27rem;
+    color: #7DCEA0;
+}
+
+#formConnexion input[type="submit"] {
+    background-color: #F0B27A;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 25rem;
+    height: 3.2rem;
+    margin-top: 2.5rem;
+    margin-left: 32rem;
+}
+
+#formConnexion input[type="submit"]:hover {
+    transform: scale(1.03);
+}
