@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    font-family: "Nunito", Arial;
+}
+
 #navAccueil {
     background-color: #303030;
     width: 100%;
@@ -7,8 +12,13 @@
     justify-content: center;
 }
 
-.firstA {
-    margin-left: 15rem;
+#firstA {
+    margin-left: 8rem;
+}
+
+#firstA img {
+    width: 8rem;
+    height: 5rem;
 }
 
 .a {
@@ -23,7 +33,7 @@
     border-bottom: 0.4rem solid #F9E79F;
 }
 
-.btnConnexion {
+#btnConnexion {
     font-size: 1.6rem;
     text-decoration: none;
     font-weight: bold;
@@ -34,27 +44,35 @@
     margin-left: 30rem
 }
 
-.btnConnexion:hover {
+#btnConnexion:hover {
     transform: scale(1.05);
 }
 
 #formCreateAccount {
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 #formCreateAccount label {
-    margin-left: 30rem;
+    margin-left: 29rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
 #labelFirstName {
-    margin-left: 9.9rem !important;
+    margin-left: 15.2rem !important;
 }
 
 #labelTel {
-    margin-left: 5.7rem !important;
+    margin-left: 10.95rem !important;
+}
+
+#labelCheck {
+    margin-left: 1rem !important;
+}
+
+#labelCheck a {
+    color: #7DCEA0;
 }
 
 #formCreateAccount input[type="text"],
@@ -69,8 +87,9 @@
 
 #formCreateAccount input[type="email"],
 #formCreateAccount input[type="password"],
-#formCreateAccount input[type="text"] {
-    margin-left: 30rem;
+#formCreateAccount input[type="text"], 
+#formCreateAccount input[type="checkbox"] {
+    margin-left: 29rem;
 }
 
 #firstName,
@@ -78,18 +97,22 @@
     margin-left: 1rem !important;
 }
 
+#firstName, #lastname, #mail, #tel {
+    width: 17rem;
+}
+
 #login,
 #password {
-    width: 24.77rem;
+    width: 35.3rem;
 }
 
 #formCreateAccount input[type="submit"] {
     font-weight: bold;
     padding: 0.5rem;
-    width: 15rem;
+    width: 25rem;
     height: 3.2rem;
     margin-top: 2.5rem;
-    margin-left: 34.5rem;
+    margin-left: 33.5rem;
     background-color: #F0B27A;
     border-radius: 0.3rem;
 }

@@ -4,12 +4,12 @@
     <body>
         <nav id="navAccueil" class="row">
             <div class="col-6">
-                <a href="index.php?action=accueil" class="firstA"><img src="" alt="logo"></a>
+                <a href="index.php?action=accueil" id="firstA"><img src="Public/img/LogoEasyBee_noir.png" alt="logo"></a>
                 <a href="#about" class="a">A propos</a>
                 <a href="#services" class="a">Nos services</a>
             </div>
             <div class="col-6">
-                <a href="index.php?action=signIn" class="btnConnexion">Se connecter</a>
+                <a href="index.php?action=signIn" id="btnConnexion">Se connecter</a>
             </div>
         </nav>
         <form action="" method="POST" id="formConnexion">
@@ -19,4 +19,6 @@
             <input type="password" name="password" id="pw" required> <br>
             <a href="index.php?action=createAccount">Créer un compte</a> <br>
             <input type="submit" value="Se connecter">
-        </form>
+        </form> 
+
+        

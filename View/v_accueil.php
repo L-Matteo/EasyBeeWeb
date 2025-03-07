@@ -5,12 +5,12 @@
         <section id="firstPage">
             <nav id="navAccueil" class="row">
                 <div class="col-6">
-                    <a href="index.php?action=accueil" class="firstA"><img src="" alt="img"></a>
+                    <a href="index.php?action=accueil" id="firstA"><img src="Public/img/LogoEasyBee_noir.png" alt="img"></a>
                     <a href="#about" class="a">A propos</a>
                     <a href="#services" class="a">Nos services</a>
                 </div>
                 <div class="col-6">
-                    <a href="index.php?action=signIn" class="btnConnexion">Se connecter</a>
+                    <a href="index.php?action=signIn" id="btnConnexion">Se connecter</a>
                 </div>
             </nav>
         </section>
