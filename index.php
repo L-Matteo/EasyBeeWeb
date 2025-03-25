@@ -15,7 +15,7 @@ $cs = new ControllerStagiaire($db);
 
 switch($action){
     case "accueil":
-        require_once $ca->c_showFormations();
+        require_once $ca->c_showFormations(); // TODO : modifier (pour la fonctionnalité connexion, pour l'insta,nt cela importe seulement la fonctionnalité showFormations)
         break;
     case "createAccount":
         require_once $cs->c_createAccount(); // TODO : régler le problème "permission denied"

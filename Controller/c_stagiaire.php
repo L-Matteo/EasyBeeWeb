@@ -31,5 +31,6 @@ class ControllerStagiaire {
             require_once "View/v_createAccount.php";
         }
     }
+    
 }
 ?>

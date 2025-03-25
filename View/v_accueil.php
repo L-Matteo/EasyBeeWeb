@@ -20,9 +20,9 @@
                         <div class="modal-body">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h3>CONNEXION</h3>
-                            <form action="" method="POST" id="formConnexion">
-                                <input type="email" name="login" id="login" required placeholder="EMAIL"> <br>
-                                <input type="password" name="password" id="pw" required placeholder="MOT DE PASSE"> <br>
+                            <form action="index.php?action=connexion" method="POST" id="formConnexion">
+                                <input type="email" name="connexionLogin" id="login" required placeholder="EMAIL"> <br>
+                                <input type="password" name="connexionPassword" id="pw" required placeholder="MOT DE PASSE"> <br>
                                 <a href="">Mot de passe oublié ?</a> <br>
                                 <input type="submit" value="Se connecter" id="SeConnecter"> <br>
                             </form>
