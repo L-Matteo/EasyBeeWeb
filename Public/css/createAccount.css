@@ -50,7 +50,7 @@ body {
 
 #formCreateAccount {
     padding: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; 
 }
 
 #formCreateAccount label {
@@ -64,7 +64,7 @@ body {
 }
 
 #labelTel {
-    margin-left: 10.95rem !important;
+    margin-left: 10.4rem !important;
 }
 
 #labelCheck {
@@ -109,14 +109,15 @@ body {
 #formCreateAccount input[type="submit"] {
     font-weight: bold;
     padding: 0.5rem;
-    width: 25rem;
+    width: 35.2rem;
     height: 3.2rem;
     margin-top: 2.5rem;
-    margin-left: 33.5rem;
+    margin-left: 29.1rem;
     background-color: #F0B27A;
     border-radius: 0.3rem;
 }
 
 #formCreateAccount input[type="submit"]:hover{
     transform: scale(1.03);
-}
+} 
+
