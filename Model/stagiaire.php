@@ -94,7 +94,7 @@ class Stagiaire {
         return $stmt;
     }
 
-    public function connexion() { // TODO : corriger la fonction connexion (voir chatGPT)
+    public function connexion() { 
         $query = "select id, nomStagiaire, prenomStagiaire from " .$this->table_name. " where mailStagiaire = :mail";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":mail", $this->mailStagiaire);

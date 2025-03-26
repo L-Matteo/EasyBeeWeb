@@ -23,7 +23,7 @@ class ControllerAccueil
     public function c_connexion()
     {
 
-        if ($_SERVER["REQUEST_METHOD"] === "POST") { // TODO : vérifier avec chatgpt
+        if ($_SERVER["REQUEST_METHOD"] === "POST") { 
             session_start();
 
             $stagiaire = new Stagiaire($this->db);
