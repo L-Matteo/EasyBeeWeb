@@ -20,6 +20,9 @@ switch($action){
     case "createAccount":
         require_once $cs->c_createAccount(); // TODO : régler le problème "permission denied"
         break;
+    case "test":
+        require_once "View/test.php";
+        break;
 }
 
 require_once "View/v_footer.php";

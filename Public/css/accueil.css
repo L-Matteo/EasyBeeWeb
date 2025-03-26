@@ -47,7 +47,7 @@ body {
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: #F0B27A;
-    margin-left: 30rem; 
+    margin-left: 30rem;
     border: none;
 }
 
@@ -86,7 +86,7 @@ body {
     margin-bottom: 1.55rem;
 }
 
-#formConnexion input[type="email"], 
+#formConnexion input[type="email"],
 #formConnexion input[type="password"] {
     border: none;
     border-bottom: 1px solid #303030;
@@ -98,36 +98,30 @@ body {
     border: none;
     border-bottom: 1px solid #303030;
     outline: none;
-} 
+}
 
 #formConnexion input[type="password"] {
     margin-bottom: 1rem;
 }
 
-#formConnexion a {
+#passwordLost {
     text-decoration: none;
     color: #7DCEA0;
 }
 
-#SeConnecter, 
-#createAccount {
+#SeConnecter {
     width: 90%;
     height: 2.5rem;
-    border: 1px solid #303030;
-}
-
-#SeConnecter {
     margin-top: 2.5rem;
-    margin-bottom: 0.5rem;
-    background-color: #303030;
+    background-color: #F0B27A;
     color: white;
+    border: none;
 }
 
 #createAccount {
-    background-color: white;
-    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #7DCEA0;
     margin-left: 3rem;
-    width: 84.3%;
 }
 
 #about {
@@ -183,7 +177,7 @@ body {
     padding: 2rem;
     border-bottom-right-radius: 1rem;
     border-top-right-radius: 1rem;
-    border-bottom-left-radius: 1rem ;
+    border-bottom-left-radius: 1rem;
     background-color: #f2f3f4;
     margin-left: 3.5rem;
     margin-top: 2rem;

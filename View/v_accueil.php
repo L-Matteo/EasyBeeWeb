@@ -1,4 +1,5 @@
-    <link href="Public/css/accueil.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="Public/css/accueil.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -20,13 +21,13 @@
                         <div class="modal-body">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h3>CONNEXION</h3>
-                            <form action="index.php?action=connexion" method="POST" id="formConnexion">
-                                <input type="email" name="connexionLogin" id="login" required placeholder="EMAIL"> <br>
+                            <form action="index.php?action=test" method="POST" id="formConnexion">
+                                <input type="email" name="connexionMail" id="login" required placeholder="ADRESSE MAIL"> <br>
                                 <input type="password" name="connexionPassword" id="pw" required placeholder="MOT DE PASSE"> <br>
-                                <a href="">Mot de passe oublié ?</a> <br>
+                                <a href="" id="passwordLost">Mot de passe oublié ?</a> <br>
                                 <input type="submit" value="Se connecter" id="SeConnecter"> <br>
                             </form>
-                            <input type="submit" value="Créer un compte" id="createAccount">
+                            <a href="index.php?action=createAccount" id="createAccount">Créer un compte</a>
                         </div>
                     </div>
                 </div>
@@ -54,5 +55,5 @@
                 }
                 ?>
             </div>
-            
         </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

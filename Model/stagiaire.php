@@ -95,10 +95,9 @@ class Stagiaire {
     }
 
     public function connexion() { // TODO : corriger la fonction connexion (voir chatGPT)
-        $query = "select id, nomStagiaire, prenomStagiaire from " .$this->table_name. " where login = :login and password = :password";
+        $query = "select id, nomStagiaire, prenomStagiaire from " .$this->table_name. " where mailStagiaire = :mail";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":login", $this->login);
-        $stmt->bindParam(":password", $this->password);
+        $stmt->bindParam(":mail", $this->mailStagiaire);
         $stmt->execute();
 
         return $stmt;

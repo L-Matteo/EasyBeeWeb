@@ -23,14 +23,23 @@ class ControllerAccueil
     public function c_connexion()
     {
 
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        if ($_SERVER["REQUEST_METHOD"] === "POST") { // TODO : vérifier avec chatgpt
+            session_start();
+
             $stagiaire = new Stagiaire($this->db);
+            $stagiaire->setMailStagiaire($_POST["connexionMail"]);
+            $passwordInput = $_POST["connexionPassword"];
 
-            $stagiaire->setLogin($_POST["connexionLogin"]);
-            $stagiaire->setPassword($_POST["connexionPassword"]);
+            $stmt = $stagiaire->connexion();
+            $user = $stmt->fetch();
 
-            if($stagiaire->connexion()){ ?>
-                <h2>Vous êtes connecté !</h2> <!-- TODO : afficher la suite de l'application à la place du h2 !-->
+            if($user && password_verify($passwordInput, $user["password"])) {
+                $_SESSION["user_id"] = $user["id"]; // se renseigner sur $_SESSION
+                $_SESSION["user_name"] = $user["nomStagiaire"]; 
+                $_SESSION["logged_in"] = true;
+
+            } else { ?>
+                <h2>Identifiant incorrecte</h2> <!-- TODO : remplacer le h2 !-->
             <?php
             }
             
