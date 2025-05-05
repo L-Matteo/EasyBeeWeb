@@ -7,21 +7,23 @@ require_once "Controller/c_stagiaire.php";
 
 $database = new Database();
 $db = $database->getBdd();
+session_start();
 
-$action = $_GET["action"] ?? "accueil";
+$action = $_GET["action"] ?? "accueil"; 
 
 $ca = new ControllerAccueil($db);
 $cs = new ControllerStagiaire($db);
 
 switch($action){
     case "accueil":
-        require_once $ca->c_showFormations(); // TODO : modifier (pour la fonctionnalité connexion, pour l'insta,nt cela importe seulement la fonctionnalité showFormations)
+        $cs->c_connexion();
+        $ca->c_showFormations();  // TODO : modifier (pour la fonctionnalité connexion, pour l'instant cela importe seulement la fonctionnalité showFormations
         break;
     case "createAccount":
-        require_once $cs->c_createAccount(); // TODO : régler le problème "permission denied"
+        $cs->c_createAccount();
         break;
-    case "test":
-        require_once "View/test.php";
+    case "ac":
+        require_once "View/accueilConnecte.php";
         break;
 }
 

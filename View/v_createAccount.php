@@ -2,15 +2,9 @@
     </head>
 
     <body>
-        <nav id="navAccueil" class="row">
-            <div class="col-6">
-                <a href="index.php?action=accueil" id="firstA"><img src="Public/img/LogoEasyBee_noir.png" alt="logo"></a>
-                <a href="#about" class="a">A propos</a>
-                <a href="#services" class="a">Nos services</a>
-            </div>
-            <div class="col-6">
-                <a href="index.php?action=signIn" id="btnConnexion">Se connecter</a>
-            </div>
+        <nav id="navAccueil">
+            <a href="index.php?action=accueil" id="firstA"><img src="Public/img/logoEasyBee_noir.png" alt="logo"></a>
+            <a href="index.php?action=accueil" class="a">Accueil</a>      
         </nav>
         <form action="" method="POST" id="formCreateAccount"> 
             <label for="lastName">Nom* : </label>

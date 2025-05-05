@@ -81,26 +81,36 @@ class Stagiaire {
 
     public function createAccount() {
 
-        $query = "insert into " .$this->table_name. "(nomStagiaire, prenomStagiaire, mailStagiaire, telStagiaire, login, password) values(:nom, :prenom, :mail, :tel, :login, :password)"; 
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":nom", $this->nomStagiaire);
-        $stmt->bindParam(":prenom", $this->prenomStagiaire);
-        $stmt->bindParam(":mail", $this->mailStagiaire);
-        $stmt->bindParam(":tel", $this->telStagiaire);
-        $stmt->bindParam(":login", $this->login);
-        $stmt->bindParam(":password", $this->password);
-        $stmt->execute();
+        try {
+            $query = "insert into " .$this->table_name. "(nomStagiaire, prenomStagiaire, mailStagiaire, telStagiaire, login, password) values(:nom, :prenom, :mail, :tel, :login, :password)"; 
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":nom", $this->nomStagiaire);
+            $stmt->bindParam(":prenom", $this->prenomStagiaire);
+            $stmt->bindParam(":mail", $this->mailStagiaire);
+            $stmt->bindParam(":tel", $this->telStagiaire);
+            $stmt->bindParam(":login", $this->login);
+            $stmt->bindParam(":password", $this->password);
 
-        return $stmt;
+            return $stmt->execute();
+        } catch(PDOException $e) {
+            echo "Erreur lors de la création du compte : " . $e->getMessage();
+            return false;
+        }
     }
 
-    public function connexion() { 
-        $query = "select id, nomStagiaire, prenomStagiaire from " .$this->table_name. " where mailStagiaire = :mail";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":mail", $this->mailStagiaire);
-        $stmt->execute();
+    public function connexion($mail) { 
 
-        return $stmt;
+        try {
+            $query = "select id, nomStagiaire, prenomStagiaire, password from " .$this->table_name. " where mailStagiaire = :mail";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(":mail", $mail);
+            $stmt->execute();
+
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch(PDOException $e) {
+            echo "Erreur lors de la création du compte : " . $e->getMessage();
+            return false;
+        }
     }
 }
 

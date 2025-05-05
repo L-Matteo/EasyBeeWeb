@@ -9,7 +9,8 @@ class ControllerStagiaire {
         $this->db = $db;
     }
 
-    public function c_createAccount(){
+    public function c_createAccount()
+    {
 
         if($_SERVER["REQUEST_METHOD"] === "POST"){
 
@@ -20,15 +21,41 @@ class ControllerStagiaire {
             $stagiaire->setMailStagiaire($_POST["createMail"]);
             $stagiaire->setTelStagiaire($_POST["createTel"]);
             $stagiaire->setLogin($_POST["createLogin"]);
-            $stagiaire->setPassword($_POST["createPassword"]);
+            $mdp = password_hash($_POST["createPassword"], PASSWORD_DEFAULT); 
+            $stagiaire->setPassword($mdp);
 
-            if($stagiaire->createAccount()){ ?>
-                <h2>Votre compte a été créé avec succès</h2> <!-- TODO : remplacer le h2 par une vu !-->
-            <?php
+            if($stagiaire->createAccount()){ 
+                $message = "Votre compte a été créé avec succès ! ";
+                require_once "View/message.php";
             } 
 
         } else {
             require_once "View/v_createAccount.php";
+        }
+    } 
+
+    public function c_connexion() 
+    {
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            
+            $stagiaire = new Stagiaire($this->db);
+
+            $mail = $_POST["connexionMail"];
+            $mdp = $_POST["connexionPassword"];
+
+            $stagiaireData = $stagiaire->connexion($mail);
+
+            if($stagiaireData && password_verify($mdp, $stagiaireData["password"])) {
+                $_SESSION["id_user"] = $stagiaireData["id"];
+                $_SESSION["nom_user"] = $stagiaireData["nomStagiaire"];
+                $_SESSION["prenom_user"] = $stagiaireData["prenomStagiaire"];
+                $_SESSION["mail_user"] = $mail;
+                header("Location: index.php?action=ac");
+            } else { ?>
+                <script>alert("Email ou mot de passe incorrect !")</script>
+            <?php
+            }
+
         }
     }
     
