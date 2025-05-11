@@ -17,7 +17,7 @@ $cs = new ControllerStagiaire($db);
 switch($action){
     case "accueil":
         $cs->c_connexion();
-        $ca->c_showFormations();  // TODO : modifier (pour la fonctionnalité connexion, pour l'instant cela importe seulement la fonctionnalité showFormations
+        $ca->c_showFormations(); 
         break;
     case "createAccount":
         $cs->c_createAccount();
