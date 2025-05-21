@@ -1,0 +1,34 @@
+#menuUser,
+#menuAdmin,
+#sousMenuFormations,
+#sousMenuCompte,
+#sousMenuAdmin {
+    background-color: #303030;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+#menuUser a, 
+#menuAdmin a,
+#sousMenuFormations a,
+#sousMenuCompte a,
+#sousMenuAdmin a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: white;
+    margin-left: 2.5rem;
+}
+
+#menuUser a:hover, 
+#menuAdmin a:hover,
+#sousMenuFormations a:hover,
+#sousMenuCompte a:hover,
+#sousMenuAdmin a:hover {
+    border-bottom: 0.1rem solid white;
+}
+
+.cacher {
+    display: none !important;
+}
