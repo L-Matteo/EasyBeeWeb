@@ -4,6 +4,6 @@
 <body>
     <nav id="nav">
         <img src="" alt="Logo d'EasyBee">
-        <a href="">Formations</a>
-        <a href="">Compte</a>
+        <a href="index.php?action=ac">Formations</a>
+        <a href="#">Compte</a>
     </nav>
