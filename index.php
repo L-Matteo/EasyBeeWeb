@@ -23,7 +23,7 @@ switch($action){
         $cs->c_createAccount();
         break;
     case "ac":
-        require_once "View/accueilConnecte.php";
+        $ca->c_accueilConnecte();
         break;
 }
 

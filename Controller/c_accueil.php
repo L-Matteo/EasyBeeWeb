@@ -19,5 +19,13 @@ class ControllerAccueil
         $lesFormations = $stmt->fetchAll(PDO::FETCH_ASSOC);
         require_once "View/v_accueil.php";
     }
+
+    public function c_accueilConnecte()
+    {
+        $formation = new Formation($this->db);
+        $stmt = $formation->showFormations();
+        $lesFormations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        require_once "View/formations.php";
+    }
 }
 ?>
