@@ -14,7 +14,7 @@
             <div class="formation">
                 <h3><?php echo $uneFormation["nomFormation"]; ?></h3>
                 <p> <?php echo $uneFormation["descriptionFormation"]; ?> </p>
-                <a href="#">S'inscrire</a>
+                <a href="index.php?action=inscription">S'inscrire</a>
             </div>
         <?php
         } 

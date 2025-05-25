@@ -25,6 +25,9 @@ switch($action){
     case "ac":
         $ca->c_accueilConnecte();
         break;
+    case "inscription":
+        require_once "View/inscriptionFormation.php";
+        break;
 }
 
 require_once "View/v_footer.php";
