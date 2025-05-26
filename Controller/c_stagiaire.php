@@ -50,7 +50,7 @@ class ControllerStagiaire {
                 $_SESSION["nom_user"] = $stagiaireData["nomStagiaire"];
                 $_SESSION["prenom_user"] = $stagiaireData["prenomStagiaire"];
                 $_SESSION["mail_user"] = $mail;
-                header("Location: index.php?action=ac");
+                header("Location: index.php?action=formation");
             } else { ?>
                 <script>alert("Email ou mot de passe incorrect !")</script>
             <?php

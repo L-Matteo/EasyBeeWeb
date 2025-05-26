@@ -22,7 +22,7 @@ switch($action){
     case "createAccount":
         $cs->c_createAccount();
         break;
-    case "ac":
+    case "formation":
         $ca->c_accueilConnecte();
         break;
     case "inscription":
