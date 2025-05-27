@@ -52,6 +52,7 @@
                 <?php
                 foreach ($lesFormations as $uneFormation) { ?>
                     <div class="formation">
+                        <img src="<?php echo $uneFormation["image"]; ?>" alt="image de la formation">
                         <h3><?php echo $uneFormation["nomFormation"]; ?></h3>
                         <p> <?php echo $uneFormation["descriptionFormation"]; ?> </p>
                     </div>
