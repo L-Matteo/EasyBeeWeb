@@ -4,6 +4,7 @@ require_once "View/v_header.php";
 require_once "Model/connexionBdd.php";
 require_once "Controller/c_accueil.php";
 require_once "Controller/c_stagiaire.php";
+require_once "Controller/c_formation.php";
 
 $database = new Database();
 $db = $database->getBdd();
@@ -13,6 +14,7 @@ $action = $_GET["action"] ?? "accueil";
 
 $ca = new ControllerAccueil($db);
 $cs = new ControllerStagiaire($db);
+$cf = new ControllerFormation($db);
 
 switch($action){
     case "accueil":
@@ -23,7 +25,11 @@ switch($action){
         $cs->c_createAccount();
         break;
     case "formation":
-        $ca->c_accueilConnecte();
+        if($_SERVER["REQUEST_METHOD"] === "POST"){
+            $cf->c_filtrerFormation();
+        } else {
+            $ca->c_accueilConnecte();
+        }
         break;
     case "inscription":
         require_once "View/inscriptionFormation.php";
