@@ -132,7 +132,7 @@ class Formation
         return $stmt;
     }
 
-    public function addFormation(){
+    public function filtrerFormation(){
         
     }
 }

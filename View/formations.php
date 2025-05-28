@@ -12,7 +12,7 @@
             <option value="intermediaire">Niveau intermédiaire</option>
             <option value="confirme">Niveau confirmé</option>
         </select>
-        <input type="submit" class="btn btn-primary" id="BtnFiltre" value="Filtrer">
+        <input type="submit" class="btn btn-primary" id="BtnFiltre" value="Filtrer"> <!-- TODO : mettre en place le filtre (model + controller) !--> 
     </form>
     <div id="listFormation">
         <?php
