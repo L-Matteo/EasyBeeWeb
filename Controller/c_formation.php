@@ -1,0 +1,41 @@
+<?php 
+
+require_once "Model/formations.php";
+
+class ControllerFormation {
+    private $db;
+
+    public function __construct($db)
+    {
+        $this->db = $db;
+    }
+
+    public function c_filtrerFormation() 
+    {
+        if(isset($_POST["BtnFiltre"])) {
+
+            $formation = new Formation($this->db);
+            $idNiv = $_POST["nameFiltre"];
+
+            switch($idNiv) {
+                case "debutant":
+                    $stmt = $formation->filtrerFormation(1);
+                    break;
+                case "intermediaire":
+                    $stmt = $formation->filtrerFormation(2);
+                    break;
+                case "confirme":
+                    $stmt = $formation->filtrerFormation(3);
+                    break;
+            }
+
+            if($stmt) {
+                $lesFormations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            }
+
+            require_once "View/filtreFormation.php";
+        }
+    }
+}
+
+?>
