@@ -5,14 +5,13 @@
     <?php require_once "menuConnecte.php"; ?>
     <h2>Nos formations</h2>
     <form action="" method="POST" class="d-flex">
-        <select name="" id="select" class="form-control" required>
+        <select name="nameFiltre" id="select" class="form-control" required>
             <option value="">- Sélectionnez un filtre -</option>
-            <option value="date">Date</option>
             <option value="debutant">Niveau débutant</option>
             <option value="intermediaire">Niveau intermédiaire</option>
             <option value="confirme">Niveau confirmé</option>
         </select>
-        <input type="submit" class="btn btn-primary" id="BtnFiltre" value="Filtrer"> <!-- TODO : mettre en place le filtre (model + controller) !--> 
+        <input type="submit" class="btn btn-primary" id="BtnFiltre" name="BtnFiltre" value="Filtrer"> <!-- TODO : mettre en place le filtre (model + controller) !--> 
     </form>
     <div id="listFormation">
         <?php
