@@ -11,7 +11,7 @@
                 <img src="<?php echo $uneFormation["image"]; ?>" alt="image de la formation">
                 <h3><?php echo $uneFormation["nomFormation"]; ?></h3>
                 <p> <?php echo $uneFormation["descriptionFormation"]; ?> </p>
-                <a href="index.php?action=inscription">S'inscrire</a>
+                <a href="index.php?action=inscription&key=<?php echo $uneFormation["id"]; ?>">S'inscrire</a>
             </div>
         <?php
         } 
