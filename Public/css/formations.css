@@ -14,6 +14,11 @@ form {
     margin-right: 1rem;
 }
 
+#BtnFiltre {
+    background-color: #F0B27A;
+    border: none;
+}
+
 #listFormation {
     display: flex;
     flex-wrap: wrap;
