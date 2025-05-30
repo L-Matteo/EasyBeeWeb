@@ -9,8 +9,7 @@ h3 {
     color: #2E2E2E;
 }
 
-p,
-a {
+p {
     color: #555555;
 }
 
@@ -45,6 +44,7 @@ a {
     font-size: 1.75rem;
     text-decoration: none;
     margin-left: 4rem;
+    color: #303030;
 }
 
 .a:hover {
@@ -163,7 +163,7 @@ a {
     width: 100%;
     margin-bottom: 3rem;
     padding: 0.1rem;
-    background-color: #fdf0d3; 
+    background-color: #fdf0d3;
     display: flex;
 }
 
