@@ -5,5 +5,5 @@
     <nav id="nav">
         <img src="" alt="Logo d'EasyBee">
         <a href="index.php?action=formation">Formations</a>
-        <a href="#">Compte</a>
+        <a href="index.php?action=compte">Compte</a>
     </nav>
