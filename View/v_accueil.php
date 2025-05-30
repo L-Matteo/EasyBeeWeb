@@ -24,7 +24,7 @@
                                 <input type="email" name="connexionMail" id="login" required placeholder="ADRESSE MAIL"> <br>
                                 <input type="password" name="connexionPassword" id="pw" required placeholder="MOT DE PASSE"> <br>
                                 <a href="" id="passwordLost">Mot de passe oublié ?</a> <br>
-                                <input type="submit" value="Se connecter" id="SeConnecter"> <br>
+                                <input type="submit" value="Se connecter" id="SeConnecter" name="SeConnecter"> <br>
                             </form>
                             <a href="index.php?action=createAccount" id="createAccount">Créer un compte</a>
                         </div>
