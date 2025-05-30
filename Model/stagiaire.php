@@ -90,8 +90,9 @@ class Stagiaire {
             $stmt->bindParam(":tel", $this->telStagiaire);
             $stmt->bindParam(":login", $this->login);
             $stmt->bindParam(":password", $this->password);
+            $stmt->execute();
 
-            return $stmt->execute();
+            return $stmt;
         } catch(PDOException $e) {
             echo "Erreur lors de la création du compte : " . $e->getMessage();
             return false;
@@ -106,9 +107,9 @@ class Stagiaire {
             $stmt->bindParam(":mail", $mail);
             $stmt->execute();
 
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(PDO::FETCH_ASSOC);;
         } catch(PDOException $e) {
-            echo "Erreur lors de la création du compte : " . $e->getMessage();
+            echo "Erreur lors de la connexion : " . $e->getMessage();
             return false;
         }
     }

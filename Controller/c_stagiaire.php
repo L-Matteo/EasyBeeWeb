@@ -12,7 +12,7 @@ class ControllerStagiaire {
     public function c_createAccount()
     {
 
-        if($_SERVER["REQUEST_METHOD"] === "POST"){
+        if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["btnCreateAccount"])){
 
             $stagiaire = new Stagiaire($this->db);
 
@@ -36,7 +36,7 @@ class ControllerStagiaire {
 
     public function c_connexion() 
     {
-        if($_SERVER["REQUEST_METHOD"] == "POST") {
+        if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["SeConnecter"])) {
             
             $stagiaire = new Stagiaire($this->db);
 
