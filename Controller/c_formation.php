@@ -36,6 +36,16 @@ class ControllerFormation {
             require_once "View/filtreFormation.php";
         }
     }
+
+    public function c_selectFormationById()
+    {
+        $formation = new Formation($this->db);
+        $id = $_GET["key"];
+        $stmt = $formation->selectFormationById($id);
+        $details = $stmt->fetch();
+
+        require_once "View/inscriptionFormation.php";
+    }
 }
 
 ?>
