@@ -21,5 +21,5 @@
             <input type="password" id="password" name="createPassword" required> <br>
             <input type="checkbox" id="check" required> 
             <label for="check" id="labelCheck">J'accepte les <a href="">conditions d'utilisation</a></label> <br> <!-- TODO : faire la page des conditions d'utilisation !--> 
-            <input type="submit" value="Confirmer">
+            <input type="submit" value="Confirmer" name="btnCreateAccount">
         </form>
