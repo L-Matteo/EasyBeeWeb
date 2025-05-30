@@ -132,7 +132,7 @@ class Formation
         return $stmt;
     }
 
-    public function filtrerFormation($idNiv)
+    public function filterFormationByLevel($idNiv)
     {
         $query = "SELECT * FROM " . $this->table_name . " WHERE idNiveauFormation = :idNiv";
         $stmt = $this->conn->prepare($query); 
