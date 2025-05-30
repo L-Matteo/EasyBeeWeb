@@ -141,6 +141,16 @@ class Formation
 
         return $stmt;
     }
+
+    public function selectFormationById($id)
+    {
+        $query = "SELECT nomFormation, descriptionFormation, prixTTC, placesDispo, libelleNiveau FROM " . $this->table_name . " JOIN niveauformation ON niveauformation.id = idNiveauFormation WHERE " .$this->table_name. ".id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
 
 ?>
