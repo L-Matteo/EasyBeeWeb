@@ -10,6 +10,19 @@ class ControllerFormation {
         $this->db = $db;
     }
 
+    public function c_showFormations()
+    {
+        $formation = new Formation($this->db);
+        $stmt = $formation->showFormations();
+        $lesFormations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        if(isset($_SESSION["id_user"])) { 
+            require_once "View/formations.php";
+        } else {
+            require_once "View/v_accueil.php";
+        }
+    }
+
     public function c_filtrerFormation() 
     {
         if(isset($_POST["BtnFiltre"])) {
@@ -19,13 +32,13 @@ class ControllerFormation {
 
             switch($idNiv) {
                 case "debutant":
-                    $stmt = $formation->filtrerFormation(1);
+                    $stmt = $formation->filterFormationByLevel(1);
                     break;
                 case "intermediaire":
-                    $stmt = $formation->filtrerFormation(2);
+                    $stmt = $formation->filterFormationByLevel(2);
                     break;
                 case "confirme":
-                    $stmt = $formation->filtrerFormation(3);
+                    $stmt = $formation->filterFormationByLevel(3);
                     break;
             }
 
