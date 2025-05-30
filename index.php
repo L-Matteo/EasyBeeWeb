@@ -32,7 +32,11 @@ switch($action){
         }
         break;
     case "inscription":
-        require_once "View/inscriptionFormation.php";
+        if($_SERVER["REQUEST_METHOD"] === "POST"){
+            echo "Vous êtes inscri"; // TODO remplacer pour une fonction
+        } else {
+            $cf->c_selectFormationById();
+        }
         break;
 }
 
